@@ -1,0 +1,11 @@
+.nav-outline {
+  .nav-link {
+    border-radius: $border-radius;
+    border: 2px solid transparent;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    border-color: $primary;
+  }
+}

@@ -1,0 +1,13 @@
+:root,
+[data-bs-theme="light"] {
+  --#{$prefix}quaternary-color: #{$body-quaternary-color};
+  --#{$prefix}quaternary-bg: #{$body-quaternary-bg};
+}
+
+[data-bs-theme="dark"] {
+  --#{$prefix}quaternary-color: #{$body-quaternary-color-dark};
+  --#{$prefix}quaternary-bg: #{$body-quaternary-bg-dark};
+
+  --#{$prefix}light: #{$dark};
+  --#{$prefix}dark: #{$light};
+}

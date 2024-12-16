@@ -1,0 +1,17 @@
+.jvm-zoom-btn {
+  background-color: $gray-400;
+}
+
+@include color-mode(dark) {
+  .jvm-zoom-btn {
+    background-color: $gray-600-dark;
+  }
+}
+
+path.jvm-region {
+  fill: var(--#{$prefix}quaternary-bg);
+}
+
+circle.jvm-marker {
+  stroke: var(--#{$prefix}secondary-bg);
+}

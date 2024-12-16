@@ -1,0 +1,6 @@
+@mixin modal-variant($color) {
+  .modal-content {
+    background: $color;
+    color: color-contrast($color);
+  }
+}

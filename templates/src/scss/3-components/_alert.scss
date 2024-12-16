@@ -1,0 +1,66 @@
+.alert {
+  padding: 0;
+  display: flex;
+  color: var(--#{$prefix}emphasis-color);
+}
+
+.alert-outline,
+.alert-outline-coloured {
+  color: var(--#{$prefix}emphasis-color);
+  background: var(--#{$prefix}secondary-bg);
+
+  .alert-message {
+    @include border-end-radius($alert-border-radius);
+    @include border-start-radius($alert-border-radius);
+    border: 1px solid var(--#{$prefix}border-color);
+  }
+
+  .alert-message:not(:nth-child(2)) {
+    @include border-start-radius(0);
+    border-left: 0;
+  }
+
+  .alert-icon {
+    @include border-start-radius($alert-border-radius);
+    color: $white;
+  }
+
+  @each $color, $value in $theme-colors {
+    &.alert-#{$color} .alert-icon {
+      background-color: $value;
+    }
+  }
+}
+
+.alert-outline-coloured {
+  @each $color, $value in $theme-colors {
+    &.alert-#{$color} .alert-message {
+      border-color: $value;
+    }
+  }
+}
+
+.alert-icon {
+  padding: $alert-padding-y $alert-padding-x;
+  background: rgba(255,255,255,.1);
+}
+
+.alert-message {
+  padding: $alert-padding-y $alert-padding-x;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@each $color, $value in $theme-colors {
+  .alert-#{$color}:not(.alert-outline):not(.alert-outline-coloured) {
+    background: shift-color($value, $alert-bg-scale);
+  }
+}
+
+@include color-mode(dark) {
+  @each $color, $value in $theme-colors {
+    .alert-#{$color}:not(.alert-outline):not(.alert-outline-coloured) {
+      background: shift-color($value, $alert-bg-scale-dark);
+    }
+  }
+}

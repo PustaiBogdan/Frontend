@@ -1,0 +1,489 @@
+// Options
+$enable-validation-icons: false !default;
+$enable-rfs: false !default;
+$enable-negative-margins: true !default;
+$min-contrast-ratio: 2 !default;
+$prefix: bs- !default;
+
+// Fonts
+$font-family-sans-serif: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-size-base: .825rem !default;
+$font-size-lg: .95rem !default;
+$font-size-sm: .75rem !default;
+$headings-font-weight: 500 !default;
+$small-font-size: 80% !default;
+
+// Spacer
+$spacer: 1rem !default;
+
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3),
+  6: ($spacer * 4.5),
+  7: ($spacer * 6)
+) !default;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+$grid-gutter-width: 24px !default;
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+$container-padding-x: .75rem !default;
+
+// Transitions
+$transition-base: all .35s ease-in-out !default;
+
+// Theme colors
+$blue: 			#3F80EA !default;
+$indigo:	 	#6610f2 !default;
+$purple: 		#6f42c1 !default;
+$pink:		 	#e83e8c !default;
+$red: 			#d9534f !default;
+$orange: 		#fd7e14 !default;
+$yellow: 		#E5A54B !default;
+$green: 		#4BBF73 !default;
+$teal: 			#20c997 !default;
+$cyan: 			#1F9BCF !default;
+
+$white:    #fff !default;
+$gray-100: #f4f7f9 !default;
+$gray-200: #e2e8ee !default;
+$gray-300: #dee6ed !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #020202 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary:        $blue !default;
+$primary-subtle: lighten($primary, 15%) !default;
+$secondary:      $gray-700 !default;
+$success:        $green !default;
+$info:           $cyan !default;
+$warning:        $yellow !default;
+$danger:         $red !default;
+$light:          lighten($gray-200, 4%) !default;
+$dark:           #293042 !default;
+
+$theme-colors: (
+	"primary": $primary,
+	"primary-subtle": $primary-subtle,
+	"secondary": $secondary,
+	"success": $success,
+	"info": $info,
+	"warning": $warning,
+	"danger": $danger,
+	"light": $light,
+	"dark": $dark
+) !default;
+
+// Social colors
+$social-colors: (
+	"facebook": #1877F2,
+	"twitter": #1da1f2,
+	"google": #ffffff,
+	"youtube": #f00,
+	"vimeo": #1ab7ea,
+	"dribbble": #ea4c89,
+	"github": #181717,
+	"instagram": #e4405f,
+	"pinterest": #bd081c,
+	"flickr": #0063dc,
+	"bitbucket": #0052cc,
+	"microsoft": #2f2f2f,
+  "apple": #000000,
+) !default;
+
+// Body
+$body-bg: #F7F9FC !default;
+$body-color: $gray-600 !default;
+
+$body-secondary-bg: $white !default;
+$body-secondary-color: rgba($body-color, .75) !default;
+
+$body-tertiary-bg: $gray-100 !default;
+$body-tertiary-color: rgba($body-color, .5) !default;
+
+$body-quaternary-bg: $gray-200 !default;
+$body-quaternary-color: rgba($body-color, .25) !default;
+
+$body-emphasis-color: $gray-700 !default;
+
+// Links
+$link-decoration: none !default;
+$link-hover-decoration: underline !default;
+
+// Common
+$border-width: 1px !default;
+
+// Fonts
+$line-height-base: 1.625 !default;
+$line-height-lg: 1.625 !default;
+$line-height-sm: 1.625 !default;
+
+// Headings
+$h1-font-size: $font-size-base * 2 !default;
+$h2-font-size: $font-size-base * 1.75 !default;
+$h3-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: $font-size-base * 1.25 !default;
+$h5-font-size: $font-size-base !default;
+$h6-font-size: $font-size-base !default;
+$headings-color: $gray-700 !default;
+
+// Progress
+$progress-bg: var(--#{$prefix}quaternary-bg);
+$progress-height: 1rem !default;
+$progress-height-sm: .5rem !default;
+$progress-height-lg: 1.5rem !default;
+
+// Shadows
+$box-shadow-sm:    0 0.05rem 0.2rem rgba(0, 0, 0, .05) !default;
+$box-shadow:       0 0.1rem 0.2rem rgba(0, 0, 0, .05) !default;
+$box-shadow-lg:    0 0.2rem 0.2rem rgba(0, 0, 0, .05) !default;
+
+// Border radius
+$border-radius-sm: .1rem !default;
+$border-radius:    .2rem !default;
+$border-radius-lg: .3rem !default;
+
+// Navbar
+$navbar-padding-y: $spacer*0.875 !default;
+$navbar-padding-x: $spacer*1.25 !default;
+$navbar-nav-link-padding-x: .5rem !default;
+$navbar-border-bottom: 0 !default;
+$navbar-box-shadow: 0 0 2rem 0 rgba($dark, .1) !default;
+$navbar-bg: $white !default;
+$navbar-light-color: var(--#{$prefix}emphasis-color) !default;
+
+// Navbar brand
+$navbar-brand-padding-y: $spacer*0.875 !default;
+$navbar-brand-padding-x: 0 !default;
+$navbar-brand-color: $gray-100 !default;
+$navbar-brand-font-weight: $font-weight-bold !default;
+$navbar-brand-font-size: 1.15rem !default;
+$navbar-brand-icon-color: $primary !default;
+
+// Navbar input
+$navbar-input-bg: $gray-100 !default;
+
+// Alerts
+$alert-padding-y: .95rem !default;
+$alert-padding-x: .95rem !default;
+$alert-border-width: 0 !default;
+$alert-bg-scale: -80% !default;
+
+// Forms
+$input-btn-border-width: $border-width !default;
+$input-btn-line-height: $line-height-base !default;
+$input-btn-line-height-sm:    $line-height-sm !default;
+$input-btn-line-height-lg: $line-height-lg !default;
+$input-btn-focus-width: .2rem !default;
+$input-btn-padding-y: .25rem !default;
+$input-btn-padding-x: .7rem !default;
+$input-btn-padding-y-sm: .15rem !default;
+$input-btn-padding-x-sm: .5rem !default;
+$input-btn-padding-y-lg: .45rem !default;
+$input-btn-padding-x-lg: 1rem !default;
+$input-btn-font-size-lg: $font-size-base !default;
+$input-border-width: $input-btn-border-width !default;
+$input-height-border: $input-border-width * 2 !default;
+$input-height-inner: ($font-size-base * $input-btn-line-height) + ($input-btn-padding-y * 2) !default;
+$input-height: calc(#{$input-height-inner} + #{$input-height-border}) !default;
+$input-height-inner-sm: ($font-size-sm * $input-btn-line-height-sm) + ($input-btn-padding-y-sm * 2) !default;
+$input-height-sm: calc(#{$input-height-inner-sm} + #{$input-height-border}) !default;
+$input-height-inner-lg: ($font-size-lg * $input-btn-line-height-lg) + ($input-btn-padding-y-lg * 2) !default;
+$input-height-lg: calc(#{$input-height-inner-lg} + #{$input-height-border}) !default;
+$input-bg: var(--#{$prefix}secondary-bg) !default;
+$input-disabled-bg: var(--#{$prefix}quaternary-bg) !default;
+
+// Dropdowns
+$dropdown-bg: var(--#{$prefix}secondary-bg) !default;
+$dropdown-link-hover-bg: var(--#{$prefix}tertiary-bg) !default;
+$dropdown-header-color: inherit !default;
+$dropdown-item-padding-y: .35rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+
+// Cards
+$card-bg: var(--#{$prefix}secondary-bg) !default;
+$card-border-radius: .25rem !default;
+$card-inner-border-radius: $card-border-radius !default;
+$card-border-width: 0 !default;
+$card-border-color: transparent !default;
+$card-cap-bg: var(--#{$prefix}secondary-bg) !default;
+$card-shadow: 0 0 .875rem 0 rgba($dark, 0.05) !default;
+$card-title-font-weight: $font-weight-bold !default;
+$card-title-color: var(--#{$prefix}emphasis-color) !default;
+$card-spacer-y: $spacer*1.25 !default;
+$card-spacer-x: $spacer*1.25 !default;
+$card-cap-padding-y: $spacer !default;
+$card-cap-padding-x: $card-spacer-x !default;
+
+// List group
+$list-group-bg: var(--#{$prefix}secondary-bg) !default;
+$list-group-item-padding-y: .75rem !default;
+$list-group-item-padding-x: 1.25rem !default;
+
+// Tables
+$table-bg: transparent !default;
+$table-color: var(--#{$prefix}body-color) !default;
+$table-cell-padding-y: .75rem !default;
+$table-cell-padding-x: .75rem !default;
+$table-cell-padding-y-sm: .3rem !default;
+$table-cell-padding-x-sm: .3rem !default;
+
+// Offcanvas
+$offcanvas-bg-color: var(--#{$prefix}secondary-bg) !default;
+
+// Sidebar general
+$sidebar-width: 260px !default;
+$sidebar-transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out !default;
+$sidebar-bg: (
+  "dark": #293042,
+  "colored": #2A64C1,
+  "light": $white
+) !default;
+  
+// Sidebar brand
+$sidebar-brand-padding-y: 1.15rem !default;
+$sidebar-brand-padding-x: 1.5rem !default;
+$sidebar-brand-font-weight: $font-weight-bold !default;
+$sidebar-brand-font-size: 1.125rem !default;
+$sidebar-brand-icon-color: (
+  "dark": lighten($primary, 2.5%),
+  "colored": $white,
+  "light": darken($primary, 5%)
+) !default;
+$sidebar-brand-icon-top-color: (
+  "dark": lighten($primary, 12.5%),
+  "colored": rgba($white, 0.66),
+  "light": lighten($primary, 15%)
+) !default;
+$sidebar-brand-color: (
+  "dark": $white,
+  "colored": $white,
+  "light": lighten($gray-800, 25%)
+) !default;
+
+// Sidebar header
+$sidebar-header-padding: 1.5rem 1.5rem 0.375rem !default;
+$sidebar-header-font-size: $font-size-sm !default;
+$sidebar-header-color: (
+  "dark": $gray-400,
+  "colored": $gray-400,
+  "light": $gray-700
+) !default;
+
+// Sidebar link
+$sidebar-link-padding: .625rem 1.625rem !default;
+$sidebar-link-font-weight: 400 !default;
+$sidebar-link-color: (
+  "dark": rgba($gray-200, 0.5),
+  "colored": rgba($gray-100, 0.7),
+  "light": $gray-700
+) !default;
+
+$sidebar-link-hover-font-weight: $font-weight-normal !default;
+$sidebar-link-hover-color: (
+  "dark": #{rgba($gray-200, 0.75)},
+  "colored": #{rgba($gray-100, 0.9)},
+  "light": #{lighten($primary, 5)}
+) !default;
+
+$sidebar-link-active-font-weight: $font-weight-normal !default;
+$sidebar-link-active-color: (
+  "dark": $gray-200,
+  "colored": $gray-100,
+  "light": #{lighten($primary, 5)}
+) !default;
+
+// Sidebar child link
+$sidebar-link-child-padding: .55rem 1.5rem .55rem 3.7rem !default;
+$sidebar-link-child-font-size: 90% !default;
+$sidebar-link-child-font-weight: 400 !default;
+
+$sidebar-link-child-color: (
+  "dark": $gray-500,
+  "colored": $gray-400,
+  "light": $gray-600
+) !default;
+$sidebar-link-child-hover-color: (
+  "dark": $gray-200,
+  "colored": $gray-100,
+  "light": #{lighten($primary, 5)}
+) !default;
+$sidebar-link-child-active-color: (
+  "dark": #{lighten($primary, 5)},
+  "colored": $white,
+  "light": #{lighten($primary, 5)}
+) !default;
+
+// Sidebar child link nested
+$sidebar-link-child-second-padding: .55rem 1.5rem .55rem 4.5rem !default;
+$sidebar-link-child-third-padding: .55rem 1.5rem .55rem 5.75rem !default;
+
+// Sidebar link icon
+$sidebar-link-icon-color: (
+  "dark": #{rgba($gray-200, 0.5)},
+  "colored": #{rgba($gray-100, 0.5)},
+  "light": $gray-700
+) !default;
+$sidebar-link-icon-hover-color: (
+  "dark": #{rgba($gray-200, 0.75)},
+  "colored": #{rgba($gray-100, 0.75)},
+  "light": #{lighten($primary, 5)}
+) !default;
+$sidebar-link-icon-active-color: (
+  "dark": $gray-200,
+  "colored": $gray-100,
+  "light": #{lighten($primary, 5)}
+) !default;
+
+// Sidebar badges
+$sidebar-badge-primary-color: (
+  "dark": $white,
+  "colored": $dark,
+  "light": $white
+) !default;
+$sidebar-badge-primary-bg: (
+  "dark": $primary,
+  "colored": $white,
+  "light": $primary
+) !default;
+
+$sidebar-badge-secondary-color: (
+  "dark": $white,
+  "colored": $dark,
+  "light": $white
+) !default;
+$sidebar-badge-secondary-bg: (
+  "dark": $gray-600,
+  "colored": rgba($white, 0.75),
+  "light": $gray-600
+) !default;
+
+// Sidebar compact
+$sidebar-compact-width: 68px;
+
+// Sidebar compact dropdown
+$sidebar-compact-dropdown-padding: ($spacer * 0.5) 0;
+$sidebar-compact-dropdown-width: 220px;
+$sidebar-compact-dropdown-box-shadow: 0 0.5rem 3rem 0.5rem rgba($black, .05) !default;
+$sidebar-compact-dropdown-border-radius: $border-radius-lg;
+$sidebar-compact-dropdown-background: $white;
+
+// Sidebar compact link
+$sidebar-compact-dropdown-link-padding: 0.5rem 1.5rem;
+$sidebar-compact-dropdown-link-color: $gray-600 !default;
+$sidebar-compact-dropdown-link-hover-color: lighten($primary, 5) !default;
+$sidebar-compact-dropdown-link-active-color: lighten($primary, 5) !default;
+
+// Sidebar compact link children
+$sidebar-compact-dropdown-child-link-padding: 0.5rem 1.5rem 0.5rem 2.5rem;
+$sidebar-compact-dropdown-child-second-link-padding: 0.5rem 1.5rem 0.5rem 3.5rem;
+
+// Sidebar bottom
+$sidebar-cta-color: (
+  "dark": $gray-200,
+  "colored": $gray-200,
+  "light": $gray-800
+) !default;
+
+$sidebar-cta-bg: (
+  "dark": #{lighten(#293042, 5%)},
+  "colored": #{lighten(#2A64C1, 3%)},
+  "light": #{darken($white, 3%)}
+) !default;
+
+$sidebar-cta-padding: $spacer*1.5 !default;
+$sidebar-cta-margin: $spacer*1.75 !default;
+$sidebar-cta-border-radius: $border-radius-lg !default;
+
+// Transitions
+$transition-appearance: background .4s ease-in-out, color .4s ease-in-out !default;
+$transition-appearance-slow: background .6s ease-in-out, color .6s ease-in-out !default;
+$transition-appearance-fast: background .1s ease-in-out, color .1s ease-in-out !default;
+
+// Modals
+$modal-content-bg: var(--#{$prefix}secondary-bg) !default;
+$modal-content-border-width: 0 !default;
+$modal-header-border-width: 1px !default;
+$modal-footer-border-width: 1px !default;
+$modal-xl: 1140px !default;
+$modal-lg: 900px !default;
+$modal-md: 600px !default;
+$modal-sm: 400px !default;
+$modal-transition: transform .25s ease-out !default;
+
+// Badges
+$badge-font-size: 80% !default;
+$badge-padding-y: .3em !default;
+$badge-padding-x: .45em !default;
+$badge-pill-padding-x: .65em !default;
+
+// Pagination
+$pagination-padding-y: .3rem !default;
+$pagination-padding-x: .75rem !default;
+$pagination-padding-y-sm: .15rem !default;
+$pagination-padding-x-sm: .5rem !default;
+$pagination-padding-y-lg: .35rem !default;
+$pagination-padding-x-lg: 1rem !default;
+$pagination-color: var(--#{$prefix}body-color) !default;
+$pagination-hover-color: var(--#{$prefix}emphasis-color) !default;
+$pagination-bg: var(--#{$prefix}secondary-bg) !default;
+
+// Content
+$content-padding: 2.5rem 2.5rem 1.5rem !default;
+
+// Footer
+$footer-background: var(--#{$prefix}secondary-bg) !default;
+
+// Datetimepicker
+$bs-datetimepicker-active-bg: $primary !default;
+
+// Simplebar
+$simplebar-scrollbar-bg: $white !default;
+
+// Hamburger
+$hamburger-bg: var(--#{$prefix}body-color) !default;
+$hamburger-width-top: 20px !default;
+$hamburger-width-middle: 24px !default;
+$hamburger-width-bottom: 16px !default;
+
+// Stats
+$stat-bg: lighten($primary, 35%) !default;
+$stat-icon-color: $primary !default;
+$stat-padding: $spacer * 0.75 !default;
+
+// Illustration
+$illustration-bg: lighten($primary, 35%) !default;
+$illustration-color: $primary !default;
+
+// Font Awesome
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+// Select2
+$s2bs5-border-color: $gray-300;

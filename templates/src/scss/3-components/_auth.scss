@@ -1,0 +1,55 @@
+.auth-full-page {
+  height: 100vh;
+}
+
+@include media-breakpoint-down(xl) {
+  .auth-full-page {
+    min-height: 100vh;
+  }
+}
+
+.auth-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.auth-form {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.auth-quote {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  right: 3rem;
+  color: $white;
+  text-shadow: 0 0 8px rgb(0 0 0 / 33%);
+  max-width: 650px;
+
+  figure {
+    margin: 0;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    color: $white;
+    margin-bottom: $spacer;
+  }
+
+  blockquote {
+    font-size: $h1-font-size;
+    font-weight: $font-weight-bold;
+    color: $white;
+    margin-bottom: $spacer;
+  }
+
+  figcaption {
+    font-size: $h4-font-size;
+    font-weight: $font-weight-bold;
+    color: $white;
+  }
+}

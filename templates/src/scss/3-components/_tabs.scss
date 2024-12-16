@@ -1,0 +1,63 @@
+.tab {
+  margin-bottom: $spacer*2;
+
+  .nav-tabs {
+    border: 0;
+  }
+
+  .nav-tabs .nav-link {
+    background: var(--#{$prefix}body-bg);
+    color: var(--#{$prefix}body-color);
+    padding: 0.75rem 1rem;
+    border: 0;
+
+    &.active {
+      background: var(--#{$prefix}secondary-bg);
+      color: var(--#{$prefix}emphasis-color);
+    }
+
+    &:hover:not(.active) {
+      color: $link-color;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .tab-content {
+    background: var(--#{$prefix}secondary-bg);
+    padding: 1.25rem;
+    box-shadow: $box-shadow;
+    border-radius: 0 0 0.25rem 0.25rem;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .tab-#{$color} {
+    @include tab-variant($value);
+  }
+}
+
+.tab-title {
+  font-size: $font-size-lg;
+}
+
+.tab-vertical .nav-tabs {
+  float: left;
+  flex-direction: column;
+
+  .nav-link {
+    @include border-start-radius($border-radius);
+    @include border-end-radius(0);
+  }
+}
+
+.tab-vertical .tab-content {
+  overflow: auto;
+}

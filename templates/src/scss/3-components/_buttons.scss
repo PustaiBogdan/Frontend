@@ -1,0 +1,37 @@
+.btn-link:not(:hover) {
+  text-decoration: none;
+}
+
+.btn-pill {
+  border-radius: 10rem;
+}
+
+.btn-square {
+  border-radius: 0;
+}
+
+.btn .lucide {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-lg .lucide {
+  width: 15px;
+  height: 15px;
+}
+
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+// Secondary button for dark mode
+@include color-mode(dark) {
+  .btn-secondary {
+    @include button-variant($gray-400, $gray-400);
+  }
+  .btn-outline-secondary {
+    @include button-outline-variant($gray-400, $gray-400);
+  }
+}

@@ -1,0 +1,25 @@
+.tempus-dominus-widget {
+  --td-light: var(--#{$prefix}secondary-bg);
+  --td-widget-background: var(--#{$prefix}secondary-bg);
+  --td-font-color: var(--#{$prefix}body-color);
+  --td-active-bg: var(--#{$prefix}primary);
+  --td-range-bg: var(--#{$prefix}primary);
+  --td-border-radius: .2rem;
+  --td-btn-hover-bg: var(--#{$prefix}tertiary-bg);
+  --td-disabled-color: var(--#{$prefix}tertiary-color);
+  --td-alternate-color: var(--#{$prefix}tertiary-color);
+  --td-dow-color: var(--#{$prefix}body-color);
+}
+
+.tempus-dominus-widget {
+  box-shadow: none;
+  width: 100%;
+
+  .date-container-days {
+    grid-auto-rows: 50px;
+  }
+
+  .calendar-header > div {
+    line-height: 3;
+  }
+}

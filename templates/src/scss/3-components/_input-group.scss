@@ -1,0 +1,41 @@
+.input-group-search {
+  .form-control,
+  .btn {
+    background: $gray-100;
+    box-shadow: none;
+    border: 0;
+    color: $dark;
+    height: $input-height-lg;
+    padding: $input-padding-y-lg $spacer*0.75;
+
+    &:focus {
+      background: $gray-100;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  .btn {
+    color: inherit;
+    transition: none;
+
+    .lucide {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@include color-mode(dark) {
+  .input-group-search {
+    .form-control,
+    .btn {
+      background: $body-bg-dark;
+      color: $light;
+  
+      &:focus {
+        background: $body-bg-dark;
+      }
+    }
+  }
+}

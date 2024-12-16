@@ -1,0 +1,30 @@
+.timeline {
+  list-style-type: none;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    background: var(--#{$prefix}quaternary-bg);
+    display: inline-block;
+    position: absolute;
+    left: 9px;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.timeline-item {
+  &:before {
+    content: ' ';
+    background: var(--#{$prefix}secondary-bg);
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid $primary;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+  }
+}

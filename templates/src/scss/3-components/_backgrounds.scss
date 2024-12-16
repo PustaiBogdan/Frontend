@@ -1,0 +1,6 @@
+// Secondary background for dark mode
+@include color-mode(dark) {
+  .bg-secondary {
+    background-color: $gray-600 !important;
+  }
+}

@@ -1,0 +1,44 @@
+// Private variable for dark color scheme
+$_dark: #293042;
+
+// Dark gray colors
+// primarily used for styling 3rd party plugins
+$gray-100-dark: mix(#fff, $_dark, 90%) !default;
+$gray-200-dark: mix(#fff, $_dark, 80%) !default;
+$gray-300-dark: mix(#fff, $_dark, 70%) !default;
+$gray-400-dark: mix(#fff, $_dark, 60%) !default;
+$gray-500-dark: mix(#fff, $_dark, 50%) !default;
+$gray-600-dark: mix(#fff, $_dark, 40%) !default;
+$gray-700-dark: mix(#fff, $_dark, 30%) !default;
+$gray-800-dark: mix(#fff, $_dark, 20%) !default;
+$gray-900-dark: mix(#fff, $_dark, 10%) !default;
+
+// Body
+$body-bg-dark: #202634 !default;
+$body-color-dark: $gray-500 !default;
+
+$body-secondary-bg-dark: $_dark !default;
+$body-secondary-color-dark: rgba($body-color-dark, .75) !default;
+
+$body-tertiary-bg-dark: mix(#fff, $_dark, 10%) !default;
+$body-tertiary-color-dark: rgba($body-color-dark, .5) !default;
+
+$body-quaternary-bg-dark: mix(#fff, $_dark, 20%) !default;
+$body-quaternary-color-dark: rgba($body-color-dark, .25) !default;
+
+$body-emphasis-color-dark: $gray-100 !default;
+
+// Navbar
+$navbar-bg-dark: $body-bg-dark !default;
+$navbar-input-bg-dark: $_dark !default;
+
+// Alerts
+$alert-bg-scale-dark: 50% !default;
+
+// Stats
+$stat-bg-dark: mix(#fff, $_dark, 10%) !default;
+$stat-icon-color-dark: $white !default;
+
+// Illustration
+$illustration-bg-dark: mix(#fff, $_dark, 5%) !default;
+$illustration-color-dark: $gray-100 !default;

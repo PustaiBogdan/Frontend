@@ -1,0 +1,18 @@
+@each $color, $value in $theme-colors {
+  .badge-subtle-#{$color} {
+    @include badge-variant(rgba($value, 0.175));
+    color: $value;
+  }
+}
+
+// Secondary badge for dark mode
+@include color-mode(dark) {
+  .badge-subtle-secondary {
+    @include badge-variant(rgba($gray-500, 0.175));
+  }
+}
+
+.badge.rounded-pill {
+  padding-right: .65em;
+  padding-left: .65em;
+}
