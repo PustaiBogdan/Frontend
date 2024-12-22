@@ -1,1 +1,5 @@
 <p>testing-route works!</p>
+<div class="row py-4 m-3">
+    <pricing-card *ngFor="let card of cards; let i = index" [class]="columnSize" [plan]="card"></pricing-card>
+</div>
+  

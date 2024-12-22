@@ -1,0 +1,31 @@
+{
+    "priceCards": [
+      {
+        "id": "1",
+        "name": "Basic Plan",
+        "features": [
+          "Feature 1",
+          "Feature 2"
+        ],
+        "price": "10.00",
+        "phoneNumber": "123-456-7890",
+        "email": "basic@example.com",
+        "buttonText": "Click me"
+      },
+      {
+        "id": "2",
+        "name": "Premium Plan",
+        "features": [
+          "Feature 1",
+          "Feature 2",
+          "Feature 3",
+          "Feature 4"
+        ],
+        "price": "20.00",
+        "phoneNumber": "234-567-8901",
+        "email": "premium@example.com",
+        "buttonText": "Sign up"
+      }
+    ]
+  }
+  
