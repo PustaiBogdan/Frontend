@@ -1,13 +1,11 @@
-import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PricingComponent } from './presentationLayer/pricing-card/pricing-card.component';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, PricingComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+    selector: 'app-root',
+    imports: [RouterOutlet],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'Frontend';

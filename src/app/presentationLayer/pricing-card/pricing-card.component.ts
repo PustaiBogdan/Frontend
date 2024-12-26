@@ -1,11 +1,11 @@
 import { Component,Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @Component({
-  selector: 'pricing-card',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './pricing-card.component.html',
-  styleUrl: './pricing-card.component.scss'
+    selector: 'app-pricing-card',
+    imports: [CommonModule],
+    standalone: true,
+    templateUrl: './pricing-card.component.html',
+    styleUrl: './pricing-card.component.scss'
 })
 export class PricingComponent {
   @Input() plan: any; // Plan should have 'name', 'price', 'features', and 'buttonText'

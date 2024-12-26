@@ -1,37 +1,40 @@
-import { Component } from '@angular/core';
-import { PricingCardManager } from '../../bll/PricingCardManagement';
-import { PricingComponent } from '../pricing-card/pricing-card.component';
-import { Card } from '../../model/Card';
-import { CommonModule } from '@angular/common';
-@Component({
-  selector: 'app-testing-route',
-  standalone: true,
-  imports: [PricingComponent,CommonModule],
-  templateUrl: './testing-route.component.html',
-  styleUrl: './testing-route.component.scss'
-})
-export class TestingRouteComponent {
-  cards: Card[] = [];
-  columnSize: String = 'col-sm-12 col-md-6';
-  constructor(
-    private pricingCardManager: PricingCardManager
-  ){}
 
+// src/app/components/testing-route.component.ts
+import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Card } from '../../model/Card';
+import { LoadableState } from '../../store/LoadableState';
+import { IAppState } from '../../store/app.store';
+import { CardActions } from '../../store/card/CardActions';
+import { CommonModule } from '@angular/common';
+import { getActiveCards } from '../../store/card/CardSelectors';
+
+@Component({
+    selector: 'app-testing-route',
+    standalone: true,
+    imports: [CommonModule],
+    templateUrl: './testing-route.component.html',
+    styleUrls: ['./testing-route.component.scss']
+})
+// export class TestingRouteComponent implements OnInit {
+  export class TestingRouteComponent {
+  cards$: Observable<LoadableState<Card[]>>;
+  columnSize: String = 'col-sm-12 col-md-6';
+  constructor(private store: Store<IAppState>) {}
 
   ngOnInit(): void {
-    console.log(' fff ');
-
-    this.fetchCardsInfo();
+    this.cards$ = this.store.select(getActiveCards);
+    this.cards$.subscribe((loadableCards) => {
+      console.log('cards$ value:', loadableCards); // Loghează valoarea curentă
+    });
+    this.store.dispatch(CardActions.fetchCards());
   }
 
-  async fetchCardsInfo(): Promise<void> {
-    try {
-      console.log(' 423232s3 ');
-      this.cards = await this.pricingCardManager.requestCardsInfo()
-      console.log(this.cards);
-    } catch (e) {
-      console.log(' 404 ');
-    }
+  onFetchCards(): void {
+    console.log(' 55 ');
+    this.store.dispatch(CardActions.fetchCardsReverse());
   }
-
 }
+
+

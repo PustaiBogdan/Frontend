@@ -27,8 +27,6 @@ import {environment} from '../../environments/enviorment';
         }
 
         getRequest(service: string, params?: any): Promise<any> {
-          console.log(environment.apiUrl);
-          console.log(environment.apiUrl + service);
           return new Promise((resolve, reject) => {
             this.httpClient.get(environment.apiUrl + service, {
               headers: new HttpHeaders({
