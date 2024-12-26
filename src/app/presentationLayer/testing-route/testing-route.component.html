@@ -5,9 +5,9 @@
 <button class="btn btn-primary mb-4" (click)="onFetchCards()">Schimba ordinea</button>
 <p>(se face alt action si se schimba in store practic cardurile)</p>
 
-<div *ngIf="cards$ | async as loadableCards">
+<div *ngIf="cards$ | async as loadableCards"  class="px-7">
   <ng-container *ngIf="!loadableCards.isLoading">
-    <div *ngIf="loadableCards.data?.length > 0; else noDataTemplate" class="row g-4 px-7">
+    <div *ngIf="loadableCards.data?.length > 0; else noDataTemplate" class="row g-4">
       <!-- Iterează peste datele din loadableCards.data -->
       <div *ngFor="let card of loadableCards.data" class="col-sm-12 col-md-6 col-lg-6 ">
         <div class="card text-center h-100">
