@@ -25,9 +25,6 @@ import { getActiveCards } from '../../store/card/CardSelectors';
 
   ngOnInit(): void {
     this.cards$ = this.store.select(getActiveCards); 
-    this.cards$.subscribe((loadableCards) => {
-      console.log('cards$ value:', loadableCards); // Loghează valoarea curentă
-    });
     this.store.dispatch(CardActions.fetchCards());
   }
 
