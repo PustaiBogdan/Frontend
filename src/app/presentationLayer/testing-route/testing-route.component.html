@@ -1,1 +1,39 @@
 <p>testing-route works!</p>
+
+<p>testing-route works!</p>
+
+<button class="btn btn-primary mb-4" (click)="onFetchCards()">Schimba ordinea</button>
+<p>(se face alt action si se schimba in store practic cardurile)</p>
+
+<div *ngIf="cards$ | async as loadableCards"  class="px-7">
+  <ng-container *ngIf="!loadableCards.isLoading">
+    <div *ngIf="loadableCards.data?.length > 0; else noDataTemplate" class="row g-4">
+      <!-- Iterează peste datele din loadableCards.data -->
+      <div *ngFor="let card of loadableCards.data" class="col-sm-12 col-md-6 col-lg-6 ">
+        <div class="card text-center h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="mb-4">
+              <h5 class="card-title">{{ card.name }}</h5>
+              <span class="display-4">{{ card.price }}</span>
+            </div>
+            <h6>Includes:</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2" *ngFor="let feature of card.features">
+                {{ feature }}
+              </li>
+            </ul>
+            <div class="mt-auto">
+              <button class="btn btn-lg btn-outline-primary">{{ card.buttonText }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noDataTemplate>
+      <p>No cards available.</p>
+    </ng-template>
+  </ng-container>
+  <div *ngIf="loadableCards.error" class="text-danger mt-4">
+    Error: {{ loadableCards.error.message }}
+  </div>
+</div>
